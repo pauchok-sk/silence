@@ -1,0 +1,40 @@
+.social-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.social-btn {
+  @include flex-center;
+  padding: 14px 18px;
+  width: fit-content;
+  border: 1px solid rgba(29, 25, 20, 0.1);
+  border-radius: 50px;
+  gap: 10px;
+
+  font-weight: 300;
+  font-size: 17px;
+
+  transition: color .3s ease, border-color .3s ease;
+
+  @include hover {
+    color: var(--light-green);
+    border-color: var(--light-green);
+  }
+  @include tablet {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    @include tablet {
+      display: none;
+    }
+  }
+}

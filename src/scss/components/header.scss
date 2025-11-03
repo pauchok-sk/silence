@@ -1,0 +1,299 @@
+.header {
+  position: sticky;
+  background-color: white;
+  padding: 15px 0px;
+  top: 0;
+  z-index: 100;
+
+  transition: tranform 0.3s ease;
+
+  &._main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+  }
+
+  @include tablet {
+    padding: 10px 0px;
+  }
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 15px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include desktop {
+      gap: 25px;
+    }
+    @include laptop {
+      gap: 20px;
+    }
+    @media (max-width: 389px) {
+      gap: 15px;
+    }
+  }
+  &__menu-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--light-green);
+    }
+    @include laptop {
+      gap: 15px;
+      font-size: 15px;
+    }
+    @media (max-width: 389px) {
+      gap: 15px;
+    }
+
+    &._active {
+      .circle {
+        svg {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .circle {
+      @include flex-center;
+      @include laptop-middle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--light-green);
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+        color: var(--light-green);
+        &:nth-child(2) {
+          display: none;
+        }
+
+        @include laptop-middle {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    span {
+      @include laptop-middle {
+        display: none;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 50px;
+
+    @include desktop {
+      gap: 25px;
+    }
+    @include laptop {
+      gap: 20px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+    a {
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: var(--light-green);
+      }
+      @include laptop {
+        font-size: 15px;
+      }
+    }
+
+    .menu-item-has-children {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @include hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+
+        .wrapper-submenu {
+          visibility: visible;
+          transform: translateY(0);
+
+          .sub-menu {
+            opacity: 1;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        background: url("@img/chevron-down.svg") center / 100% auto no-repeat;
+        transition: transform 0.3s ease;
+      }
+
+      .wrapper-submenu {
+        position: fixed;
+        padding-top: 35px;
+        top: 55px;
+        left: calc(50% - 810px);
+        width: 1620px;
+        max-width: calc(100% - 30px);
+
+        visibility: hidden;
+        transform: translateY(30px);
+
+        transition:
+          opacity 0.4s ease,
+          visibility 0.4s ease,
+          transform 0.4s ease;
+
+        @media (max-width: 1650px) {
+          width: auto;
+          left: 15px;
+          right: 15px;
+        }
+      }
+      .sub-menu {
+        z-index: 10;
+        color: white;
+        width: 100%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        row-gap: 15px;
+        padding: 40px;
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+        background: rgba(29, 25, 20, 0.5);
+
+        opacity: 0;
+
+        z-index: 50;
+
+        transition: opacity .3s ease;
+
+        a {
+          transition: color 0.3s ease;
+          @include hover {
+            color: var(--light-green);
+          }
+        }
+      }
+    }
+  }
+  &__mob-buttons {
+    display: flex;
+    gap: 20px;
+    @media (max-width: 389px) {
+      gap: 15px;
+    }
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  &__mob-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--light-green);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    @include laptop-middle {
+      width: 120px;
+    }
+    @include tablet {
+      width: 55px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px;
+
+    font-weight: 300;
+    font-size: 24px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--light-green);
+    }
+    @include laptop {
+      font-size: 20px;
+      gap: 15px;
+    }
+    @include laptop-middle {
+      font-size: 18px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--light-green);
+    }
+  }
+  &__mob-brone {
+    padding: 12px 14px;
+    border: 1px solid rgba(176, 199, 76, 0.3);
+    display: block;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+
+    font-size: 14px;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+    @include hover {
+      background-color: rgba(176, 199, 76, 0.3);
+    }
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}

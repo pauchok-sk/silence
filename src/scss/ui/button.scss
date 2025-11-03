@@ -1,0 +1,47 @@
+.btn-s {
+  --border-color: var(--primary);
+  --fill-color: var(--primary);
+  --hover-fill-color: var(--primary-light);
+  --hover-border-color: var(--primary-light);
+
+  @include flex-center;
+  position: relative;
+  cursor: pointer;
+  padding: 18px 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--fill-color);
+  border-radius: 12px;
+  width: fit-content;
+
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--hover-fill-color);
+    border-color: var(--hover-fill-color);
+  }
+  
+  &._brown {
+    --border-color: var(--brown);
+    --fill-color: var(--brown);
+    --hover-fill-color: var(--brown-light);
+    --hover-border-color: var(--brown-light);
+  }
+  
+  &._stroke {
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -4px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+  }
+}
