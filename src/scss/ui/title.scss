@@ -1,1 +1,15 @@
-
+.s-title {
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  @include laptop-middle {
+    font-size: 32px;
+  }
+  @include laptop-min {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 24px;
+  }
+}

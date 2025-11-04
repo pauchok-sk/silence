@@ -1,0 +1,42 @@
+.form-bar {
+  position: sticky;
+  padding: 20px 15px;
+  background-color: var(--wild);
+  background-color: var(--wild);
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  z-index: 30;
+  transition: transform .4s ease;
+
+  &._hide {
+    transform: translateY(100%);
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  .btn-s {
+    width: 100%;
+    @include mobile {
+      border-radius: 6px;
+      padding: 10px 15px;
+    }
+  }
+
+  .input {
+    @include mobile {
+      border-radius: 6px;
+      font-size: 14px;
+      padding: 12px;
+
+      &._date {
+        padding-right: 12px;
+        background: none;
+        background-color: white;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import "../scss/style.scss";
 import burger from "./files/burger.js";
 import burgerTabs from "./files/burgerTabs.js";
+import formBarScroll from "./files/formBarScroll.js";
 import headerScroll from "./files/headerScroll.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
@@ -10,3 +11,6 @@ burger();
 burgerTabs();
 sliders();
 headerScroll();
+formBarScroll();
+
+Fancybox.bind("[data-fancybox]", {});

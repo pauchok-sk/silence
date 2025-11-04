@@ -12,13 +12,19 @@
 @import "./ui/social";
 @import "./ui/slider";
 @import "./ui/input";
+@import "./ui/sect";
+@import "./ui/title";
+@import "./ui/gallery";
 
 // widget
 @import "./widget/burger";
+@import "./widget/form-bar";
 
 // components
 @import "./components/header";
 
 @import "./components/intro";
+@import "./components/s-about";
+@import "./components/s-lodges";
 
 @import "./components/footer";
