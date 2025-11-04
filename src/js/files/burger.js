@@ -5,7 +5,8 @@ export default function burger() {
   const burgerOverlay = document.querySelector("#burger-overlay");
 
   if (burger) {
-    const headerHeight = document.querySelector(".header").clientHeight;
+    const header = document.querySelector(".header");
+    const headerHeight = header.clientHeight;
     burger.addEventListener("click", (e) => e.stopPropagation());
 
     burgerOverlay.addEventListener("click", handlerBurgerClose);
@@ -38,13 +39,20 @@ export default function burger() {
       burger.classList.add("_open");
       burgerOverlay.classList.add("_active");
       document.body.classList.add("body-hidden");
+
+      if (
+        window.matchMedia("(max-width: 991px)").matches &&
+        header.classList.contains("_hide")
+      ) {
+        header.classList.remove("_hide");
+      }
     }
 
     function updateHeightBurger() {
       burger.style.maxHeight = `${window.visualViewport.height}px`;
 
       if (window.matchMedia("(max-width: 991px)").matches) {
-        burger.style.top = `${headerHeight}px`;
+        burger.style.top = `${headerHeight + 1}px`;
       }
     }
 

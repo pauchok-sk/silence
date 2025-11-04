@@ -35,18 +35,6 @@
             </li>
             <li><a href="#">Чем заняться</a></li>
           </ul>
-          <div class="header__mob-buttons">
-            <a href="tel:+79930930330" class="header__mob-btn">
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-tel-stroke"></use>
-              </svg>
-            </a>
-            <a href="#" target="_blank" rel="nofollow" class="header__mob-btn">
-              <svg>
-                <use xlink:href="img/icons/icons.svg#icon-location-stroke"></use>
-              </svg>
-            </a>
-          </div>
         </nav>
         <a href="tel:+79930930330" class="header__tel">
           <svg>
@@ -54,13 +42,20 @@
           </svg>
           <span>+7 (993) 093-03-30</span>
         </a>
-        <a href="#modal-brone" data-fancybox class="header__mob-brone">
-          Забронировать
-        </a>
       </div>
     </div>
   </div>
   <div class="swiper intro__slider">
+    <div class="slider-btn-m _prev">
+      <svg>
+        <use xlink:href='img/icons/icons.svg#icon-prev'></use>
+      </svg>
+    </div>
+    <div class="slider-btn-m _next">
+      <svg>
+        <use xlink:href='img/icons/icons.svg#icon-next'></use>
+      </svg>
+    </div>
     <div class="swiper-wrapper">
       <div
         class="swiper-slide intro__slide"
@@ -74,10 +69,39 @@
             <div class="intro__slide-descr">
               Гармония леса и озер в месте, где живет Тишина
             </div>
-            <a href="#" class="btn-s intro__slide-btn _brown _stroke">Подобрать</a>
+            <a href="#" class="btn-s intro__slide-btn _brown _stroke">Забронировать</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-slide intro__slide"
+        style="
+          background: url(&quot;@img/intro.jpg&quot;) center / cover no-repeat;
+        "
+      >
+        <div class="container">
+          <div class="intro__slide-content">
+            <img src="@img/intro-logo.svg" alt="icon" class="intro__slide-icon" />
+            <div class="intro__slide-descr">
+              Гармония леса и озер в месте, где живет Тишина 2
+            </div>
+            <a href="#" class="btn-s intro__slide-btn _brown _stroke">Забронировать</a>
           </div>
         </div>
       </div>
     </div>
+    <div class="intro__slider-pagination"></div>
   </div>
+  <form action="#" class="intro__form">
+    <div class="input-control">
+      <input type="text" placeholder="Укажите дату заезда" class="input _date">
+    </div>
+    <div class="input-control">
+      <input type="text" placeholder="Укажите дату выезда" class="input _date">
+    </div>
+    <div class="input-control">
+      <input type="number" placeholder="Количество гостей" class="input">
+    </div>
+    <button class="btn-s">Подобрать</button>
+  </form>
 </section>
