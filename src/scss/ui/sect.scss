@@ -1,3 +1,64 @@
+.s-head-decor {
+  position: relative;
+  margin-top: 90px;
+
+  @include laptop-min {
+    margin-top: 70px;
+  }
+  @include tablet {
+    margin-top: 30px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(calc(-100% + 2px));
+    background: url("@img/decor-head.png") bottom 0 left 0 / 100% auto no-repeat;
+    height: 75px;
+    @include laptop-min {
+      height: 30px;
+    }
+  }
+}
+.s-bottom-decor {
+  position: relative;
+  margin-bottom: 90px;
+
+  @include laptop-min {
+    margin-bottom: 70px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(calc(100% - 2px));
+    background: url("@img/decor-bottom.png") top 0 left 0 / 100% auto no-repeat;
+    height: 75px;
+    @include laptop-min {
+      height: 30px;
+    }
+  }
+
+  & + section {
+    margin-top: 180px !important;
+    @include laptop-min {
+      margin-top: 100px !important;
+    }
+    @include tablet {
+      margin-top: 70px !important;
+    }
+  }
+}
+
 .sect-p {
   padding: 90px 0px;
   @include laptop-min {
@@ -7,13 +68,29 @@
     padding: 50px 0px;
   }
 }
+.sect-m {
+  margin: 90px 0px;
+  @include laptop-min {
+    margin: 70px 0px;
+  }
+  @include tablet {
+    margin: 50px 0px;
+  }
+}
 .sect-head {
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 30px;
   margin-bottom: 70px;
+
+  &._col {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   @include laptop-middle {
     margin-bottom: 50px;
   }
@@ -22,6 +99,11 @@
   }
   @include tablet {
     gap: 20px;
+
+    &._col {
+      text-align: start;
+    }
+
     .s-title {
       text-align: center;
       width: 100%;
@@ -32,6 +114,8 @@
     align-items: start;
     gap: 60px;
     max-width: 800px;
+    color: rgba(29, 25, 20, 0.7);
+    margin: 0;
     @include laptop-min {
       gap: 30px;
     }

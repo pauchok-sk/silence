@@ -3,17 +3,19 @@
   --fill-color: var(--primary);
   --hover-fill-color: var(--primary-light);
   --hover-border-color: var(--primary-light);
+  --color: white;
+  --hover-color: white;
 
   @include flex-center;
   position: relative;
   cursor: pointer;
-  padding: 18px 30px;
+  padding: 18px 40px;
   border: 1px solid var(--border-color);
   background-color: var(--fill-color);
   border-radius: 12px;
   width: fit-content;
 
-  color: white;
+  color: var(--color);
   text-align: center;
   font-weight: 400;
   font-size: 20px;
@@ -26,27 +28,54 @@
   @include hover {
     background-color: var(--hover-fill-color);
     border-color: var(--hover-fill-color);
+    color: var(--hover-color);
+
+    &::before {
+      border-color: var(--hover-fill-color) !important;
+    }
+    &::after {
+      background-color: var(--hover-fill-color) !important;
+    }
   }
 
   @include tablet {
     font-size: 16px;
     padding: 16px 25px;
   }
-  
+
+  &._stroke {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      transition: border-color .3s ease, background-color .3s ease;
+    }
+    &::before {
+      inset: 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    &::after {
+      inset: 4px;
+      border-radius: 8px;
+      background-color: var(--fill-color);
+    }
+  }
+
   &._brown {
     --border-color: var(--brown);
     --fill-color: var(--brown);
     --hover-fill-color: var(--brown-light);
     --hover-border-color: var(--brown-light);
   }
-  
-  &._stroke {
-    &::before {
-      position: absolute;
-      content: "";
-      inset: -4px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
+  &._outline-brown {
+    --border-color: var(--brown);
+    --fill-color: transparent;
+    --color: var(--brown);
+    --hover-fill-color: var(--brown);
+    --hover-border-color: var(--brown) --hover-color: white;
   }
 }

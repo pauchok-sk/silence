@@ -1,0 +1,98 @@
+.s-lodges {
+  position: relative;
+  z-index: 1;
+
+  .sect-head {
+    margin-bottom: 0 !important;
+  }
+
+  &__body {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  &__decor {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @include laptop {
+      width: 100%;
+      position: static;
+    }
+    @include laptop-min {
+      width: auto;
+      margin: 0 -55px;
+    }
+  }
+  &__decor-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+  }
+  &__nature-left {
+    display: block;
+    @include laptop-middle {
+      width: 160px;
+    }
+  }
+  &__curve {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+    object-fit: contain;
+    z-index: -1;
+    @include laptop-min {
+      width: 960px;
+    }
+  }
+  &__nature-right {
+    display: block;
+    @include laptop-middle {
+      width: 225px;
+    }
+  }
+  &__slider {
+    margin-top: 100px;
+    @include laptop {
+      margin-top: 30px;
+    }
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slider-wrapper {
+    // display: grid !important;
+    width: 100% !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 70px;
+
+    @include laptop-middle {
+      flex-wrap: nowrap;
+      gap: 0px;
+    }
+
+    .swiper-slide {
+      width: calc(50% - 10px);
+      height: auto !important;
+      @include laptop-middle {
+        width: 530px !important;
+      }
+      @include tablet {
+        width: 400px !important;
+        max-width: 100%;
+      }
+    }
+    .card-lodge {
+      height: 100%;
+    }
+  }
+}
