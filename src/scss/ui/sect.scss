@@ -59,6 +59,16 @@
   }
 }
 
+.sect-m + .s-head-decor {
+  margin-top: 180px !important;
+  @include laptop-min {
+    margin-top: 100px !important;
+  }
+  @include tablet {
+    margin-top: 70px !important;
+  }
+}
+
 .sect-p {
   padding: 90px 0px;
   @include laptop-min {

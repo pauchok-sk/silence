@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+import brone from "./files/brone.js";
 import burger from "./files/burger.js";
 import burgerTabs from "./files/burgerTabs.js";
 import formBarScroll from "./files/formBarScroll.js";
@@ -12,5 +13,6 @@ burgerTabs();
 sliders();
 headerScroll();
 formBarScroll();
+brone();
 
 Fancybox.bind("[data-fancybox]", {});

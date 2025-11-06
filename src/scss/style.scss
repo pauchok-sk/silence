@@ -17,10 +17,13 @@
 @import "./ui/gallery";
 @import "./ui/backgrounds";
 @import "./ui/card-lodge";
+@import "./ui/check-wrapper";
+@import "./ui/content";
 
 // widget
 @import "./widget/burger";
 @import "./widget/form-bar";
+@import "./widget/modal";
 
 // components
 @import "./components/header";
@@ -29,5 +32,7 @@
 @import "./components/s-about";
 @import "./components/s-lodges";
 @import "./components/s-adv";
+@import "./components/s-offer";
+@import "./components/s-conducting";
 
 @import "./components/footer";

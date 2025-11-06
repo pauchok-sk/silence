@@ -1,13 +1,15 @@
 .input {
   border-radius: 12px;
-  border: none;
   outline: none;
   padding: 20px;
   background-color: white;
+  border: 1px solid white;
   width: 100%;
 
   font-weight: 300;
   font-size: 17px;
+
+  transition: border-color .3s ease;
 
   @include tablet {
     font-size: 15px;
@@ -37,5 +39,9 @@
   &[type="number"] {
     -moz-appearance: textfield;
     appearance: none;
+  }
+
+  &._outline {
+    border: 1px solid var(--wild);
   }
 }

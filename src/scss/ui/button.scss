@@ -20,6 +20,8 @@
   font-weight: 400;
   font-size: 20px;
 
+  z-index: 1;
+
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -43,6 +45,11 @@
     padding: 16px 25px;
   }
 
+  &._outline {
+    --fill-color: transparent;
+    --hover-fill-color: var(--primary);
+    --color: var(--primary);
+  }
   &._stroke {
     background-color: transparent !important;
     border-color: transparent !important;

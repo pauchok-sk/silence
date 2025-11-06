@@ -1,0 +1,35 @@
+.modal {
+  display: none;
+  width: 600px;
+  max-width: calc(100% - 30px);
+  padding: 30px;
+  @include laptop-min {
+    padding: 25px 17px;
+  }
+
+  &__title {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include laptop-min {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      margin: 0;
+      width: 100%;
+    }
+    .btn-s {
+      width: 100%;
+    }
+  }
+}
