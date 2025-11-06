@@ -58,7 +58,9 @@
       position: absolute;
       content: "";
       z-index: -1;
-      transition: border-color .3s ease, background-color .3s ease;
+      transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
     }
     &::before {
       inset: 0;
@@ -84,5 +86,38 @@
     --color: var(--brown);
     --hover-fill-color: var(--brown);
     --hover-border-color: var(--brown) --hover-color: white;
+  }
+}
+
+.btn-play {
+  @include flex-center;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(29, 25, 20, 0.5);
+  backdrop-filter: blur(20px);
+  width: 80px;
+  height: 80px;
+
+  color: white;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include hover {
+    background-color: rgba(29, 25, 20, 0.8);
+  }
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
