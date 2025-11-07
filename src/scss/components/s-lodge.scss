@@ -1,0 +1,205 @@
+.s-lodge {
+  position: relative;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("@img/decor-bg.png") 0 0 / 100% auto no-repeat;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 60px;
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+  }
+  &__slider {
+    position: sticky;
+    top: 20px;
+    width: calc(50% - 30px);
+    flex-shrink: 0;
+    @include laptop-middle {
+      width: calc(50% - 15px);
+    }
+    @include laptop-min {
+      position: relative;
+      top: 0;
+      width: 750px;
+      max-width: 100%;
+    }
+  }
+  &__slide {
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 1/0.77;
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s linear;
+    }
+  }
+  &__main {
+    flex: 1;
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__main-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  &__main-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 150%;
+    margin: 0;
+    @include laptop {
+      font-size: 32px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__main-decor {
+    display: block;
+    width: 50px;
+    flex-shrink: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__content {
+    color: rgba(29, 25, 20, 0.7);
+  }
+  &__spec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    row-gap: 20px;
+    margin-top: 30px;
+    @include laptop {
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include tablet {
+      margin-top: 20px;
+    }
+    @include tablet-min {
+      gap: 20px;
+    }
+  }
+  &__spec-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    line-height: 150%;
+    @include tablet-min {
+      gap: 20px;
+    }
+
+    img {
+      display: block;
+      width: 35px;
+      flex-shrink: 0;
+      @include tablet-min {
+        width: 30px;
+      }
+    }
+    .name {
+      color: rgba(29, 25, 20, 0.5);
+      @include laptop-middle {
+        font-size: 15px;
+      }
+      @include tablet-min {
+        font-size: 13px;
+      }
+    }
+    .value {
+      font-size: 22px;
+      @include laptop-middle {
+        font-size: 18px;
+      }
+      @include tablet-min {
+        font-size: 15px;
+      }
+    }
+  }
+  &__price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 6px;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: var(--wood);
+    @include laptop-middle {
+      padding: 20px;
+    }
+    @include tablet {
+      margin-top: 20px;
+      gap: 20px;
+    }
+    @include tablet-min {
+      padding: 15px;
+    }
+  }
+  &__price-item {
+    line-height: 150%;
+    .name {
+      color: rgba(29, 25, 20, 0.5);
+      margin-bottom: 5px;
+      @include tablet-min {
+        font-size: 14px;
+      }
+    }
+    .value {
+      font-weight: 500;
+      font-size: 25px;
+      @include laptop-middle {
+        font-size: 20px;
+      }
+      @include tablet-min {
+        font-size: 18px;
+      }
+    }
+  }
+  &__warn {
+    margin-top: 30px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--brown);
+    }
+  }
+  &__bottom {
+  }
+  &__bottom-btn {
+  }
+  &__play {
+  }
+}

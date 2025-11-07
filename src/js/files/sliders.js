@@ -64,4 +64,22 @@ export default function sliders() {
       });
     });
   }
+
+  const lodgeSlider = document.querySelector(".s-lodge__slider");
+
+  if (lodgeSlider) {
+    const swiper = new Swiper(lodgeSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: ".s-lodge .slider-btn._prev",
+        nextEl: ".s-lodge  .slider-btn._next",
+      },
+      pagination: {
+        el: ".s-lodge .slider-pagination-shadow",
+        clickable: true,
+      },
+    });
+  }
 }

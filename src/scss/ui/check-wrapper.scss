@@ -1,6 +1,11 @@
 .check-wrapper {
   --color: black;
-  --icon: url("@img/check-white.svg") center / 85% auto no-repeat;
+  --icon: url("@img/check-white.svg") center / 10px auto no-repeat;
+
+  &._white {
+    --color: white;
+    --icon: url("@img/check-brown.svg") center / 10px auto no-repeat;
+  }
 
   input[type="checkbox"] {
     display: none;
@@ -20,11 +25,16 @@
       font-size: 14px;
       line-height: 150%;
 
+      @include tablet-min {
+        font-size: 13px;
+      }
+
       a {
-        color: var(--primary);
+        text-decoration: underline;
         text-underline-offset: 3px;
+        transition: color .3s ease;
         @include hover {
-          text-decoration: underline;
+          color: var(--light-green);
         }
       }
 

@@ -1,0 +1,54 @@
+.page-head {
+  text-align: center;
+  margin-bottom: 70px;
+  @include laptop-middle {
+    margin-bottom: 50px;
+  }
+  @include laptop-min {
+    margin-bottom: 30px;
+  }
+  &__content {
+    width: 900px;
+    max-width: 100%;
+    margin: 30px auto 0 auto;
+    color: rgba(29, 25, 20, 0.7);
+
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 15px 5px 15px;
+    @include tablet {
+      padding: 10px 15px;
+    }
+
+    .btn-s {
+      white-space: nowrap;
+      &:first-child {
+        margin-left: auto;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #fff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--brown);
+        border-radius: 12px;
+      }
+    }
+  }
+}

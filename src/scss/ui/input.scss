@@ -45,3 +45,7 @@
     border: 1px solid var(--wild);
   }
 }
+textarea.input {
+  resize: none;
+  min-height: 120px;
+}

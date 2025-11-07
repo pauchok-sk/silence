@@ -46,6 +46,9 @@
     @include hover {
       color: var(--primary);
     }
+    @include laptop-min {
+      font-size: 24px;
+    }
     @include tablet {
       font-size: 20px;
     }
@@ -67,8 +70,12 @@
       gap: 20px;
       row-gap: 10px;
     }
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
     @include tablet {
       margin: 20px 0px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   &__spec-item {
@@ -110,8 +117,13 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    @include tablet {
+    @include laptop-middle {
       gap: 10px;
+      .btn-s {
+        width: 100%;
+      }
+    }
+    @include tablet {
       .btn-s {
         width: 100%;
       }

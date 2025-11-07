@@ -46,6 +46,8 @@ export default function burger() {
       ) {
         header.classList.remove("_hide");
       }
+
+      updateHeightBurger();
     }
 
     function updateHeightBurger() {

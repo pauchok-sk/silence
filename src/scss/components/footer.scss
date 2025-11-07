@@ -1,0 +1,191 @@
+.footer {
+  background-color: #262627;
+  color: white;
+  padding: 60px 0px;
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__head {
+    @include flex-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 40px;
+    row-gap: 30px;
+    @include laptop-min {
+      justify-content: start;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 90px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__contacts {
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--light-green);
+      }
+    }
+  }
+  &__tel {
+    display: block;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 5px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__mail {
+  }
+  &__address {
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    @include laptop {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      padding-top: 30px;
+      gap: 30px;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: start;
+    width: fit-content;
+    gap: 80px;
+    flex-shrink: 0;
+    @include desktop {
+      gap: 40px;
+    }
+    @include laptop {
+      gap: 80px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 50px;
+      row-gap: 30px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+  &__nav-item {
+  }
+  &__nav-title {
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+    @include tablet-min {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include tablet-min {
+      gap: 10px;
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--light-green);
+      }
+    }
+  }
+  &__content {
+    flex: 0 1 645px;
+
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+
+    @include laptop {
+      flex: none;
+      width: 100%;
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: white;
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__content-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    row-gap: 30px;
+    margin-bottom: 60px;
+    @include laptop {
+      max-width: 600px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__content-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 10px;
+    @include laptop {
+      max-width: 600px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      img {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+  &__descr {
+    font-size: 12px;
+    line-height: 130%;
+    margin: 30px 0px 0px 0px;
+  }
+}

@@ -1,0 +1,56 @@
+.s-connect {
+  @include tablet-min {
+    .container {
+      padding: 0;
+    }
+  }
+  &__body {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 100px;
+    color: white;
+    z-index: 1;
+
+    @include laptop-min {
+      padding: 50px;
+    }
+    @include tablet-min {
+      padding: 50px 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: rgba(29, 25, 20, 0.2);
+      z-index: -1;
+    }
+  }
+  &__form-wrapper {
+    padding: 60px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    background: rgba(29, 25, 20, 0.5);
+    width: 700px;
+    max-width: 100%;
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet-min {
+      padding: 20px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .btn-s {
+      width: 100%;
+    }
+  }
+}

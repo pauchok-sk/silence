@@ -80,11 +80,22 @@
 }
 .sect-m {
   margin: 90px 0px;
+  &._pt {
+    margin-top: 0 !important;
+    padding-top: 50px;
+  }
   @include laptop-min {
     margin: 70px 0px;
+
+    &._pt {
+      padding-top: 30px;
+    }
   }
   @include tablet {
     margin: 50px 0px;
+    &._pt {
+      padding-top: 15px;
+    }
   }
 }
 .sect-head {

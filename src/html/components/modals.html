@@ -1,35 +1,35 @@
 <div class="modal" id="modal-brone">
-  <div class="modal__title">Забронировать</div>
-  <div class="modal__form">
-    <div>
-      <input type="text" id="input-brone" />
-    </div>
-    <div class="input-control">
-      <input type="text" placeholder="Ваше имя" class="input _outline" />
-    </div>
-    <div class="input-control">
-      <input
-        type="text"
-        placeholder="Укажите дату заезда"
-        class="input _outline _date"
-      />
-    </div>
-    <div class="input-control">
-      <input
-        type="text"
-        placeholder="Укажите дату выезда"
-        class="input _outline _date"
-      />
-    </div>
-    <div class="input-control">
-      <input
-        type="number"
-        placeholder="Количество гостей"
-        class="input _outline"
-      />
-    </div>
-    <div class="check-wrapper">
-      <p>
+  <div class="modal__wrapper">
+    <div class="modal__title">Забронировать</div>
+    <form class="modal__form">
+      <div style="display: none">
+        <input type="text" id="input-brone" />
+      </div>
+      <div class="input-control">
+        <input type="text" placeholder="Ваше имя" class="input _outline" />
+      </div>
+      <div class="input-control">
+        <input
+          type="text"
+          placeholder="Укажите дату заезда"
+          class="input _outline _date"
+        />
+      </div>
+      <div class="input-control">
+        <input
+          type="text"
+          placeholder="Укажите дату выезда"
+          class="input _outline _date"
+        />
+      </div>
+      <div class="input-control">
+        <input
+          type="number"
+          placeholder="Количество гостей"
+          class="input _outline"
+        />
+      </div>
+      <div class="check-wrapper">
         <span class="wpcf7-form-control-wrap" data-name="acceptance-622">
           <span class="wpcf7-form-control wpcf7-acceptance">
             <span class="wpcf7-list-item">
@@ -57,15 +57,14 @@
             </span>
           </span>
         </span>
-        <br />
-        <input
-          class="wpcf7-form-control wpcf7-submit has-spinner btn-s form-btn"
-          type="submit"
-          value="Отправить заявку"
-          disabled=""
-        />
-        <span class="wpcf7-spinner"></span>
-      </p>
-    </div>
+      </div>
+      <button class="btn-s">Отправить</button>
+    </form>
+  </div>
+</div>
+<div class="modal" id="modal-thank">
+  <div class="modal__wrapper">
+    <div class="modal__title">Благодарим за заявку!</div>
+    <p class="modal__content">Мы свяжемся с Вами в ближайшее время.</p>
   </div>
 </div>
