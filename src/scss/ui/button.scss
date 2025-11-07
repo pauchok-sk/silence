@@ -96,26 +96,36 @@
 }
 
 .btn-play {
+  --background-color: rgba(29, 25, 20, 0.5);
+  --hover-background-color: rgba(29, 25, 20, 0.8);
+  --color: white;
+
   @include flex-center;
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgba(29, 25, 20, 0.5);
+  background-color: var(--background-color);
   backdrop-filter: blur(20px);
   width: 80px;
   height: 80px;
 
-  color: white;
+  color: var(--color);
 
   transition:
     color 0.3s ease,
     background-color 0.3s ease;
 
   @include hover {
-    background-color: rgba(29, 25, 20, 0.8);
+    background-color: var(--hover-background-color);
   }
   @include tablet {
     width: 60px;
     height: 60px;
+  }
+
+  &._brown {
+    --background-color: rgba(153, 109, 88, 0.15);
+    --hover-background-color: rgba(153, 109, 88, 0.4);
+    --color: var(--brown);
   }
 
   svg {
