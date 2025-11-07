@@ -7,6 +7,12 @@
   @include laptop-min {
     margin-bottom: 30px;
   }
+  .main-title {
+    margin-top: 20px;
+    @include tablet {
+      margin-top: 15px;
+    }
+  }
   &__content {
     width: 900px;
     max-width: 100%;
@@ -21,9 +27,11 @@
     display: flex;
     gap: 10px;
     overflow-x: auto;
+    margin-top: 40px;
     padding: 0 15px 5px 15px;
     @include tablet {
       padding: 10px 15px;
+      margin-top: 25px;
     }
 
     .btn-s {

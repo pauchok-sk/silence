@@ -1,0 +1,28 @@
+.s-stocks {
+  &__body {
+    @include laptop-min {
+      overflow: hidden;
+    }
+  }
+  &__slider {
+    @include laptop-min {
+      overflow: visible !important;
+    }
+    .swiper-slide {
+      height: auto !important;
+      box-sizing: border-box;
+
+      @include laptop-min {
+        width: 390px !important;
+        max-width: 100%;
+      }
+      @include tablet {
+        width: 320px !important;
+      }
+
+      .card-stock {
+        height: 100%;
+      }
+    }
+  }
+}

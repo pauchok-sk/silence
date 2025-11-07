@@ -1,0 +1,49 @@
+.card-stock {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/0.72;
+    @include tablet {
+      aspect-ratio: 1/0.63;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    width: fit-content;
+    margin: 20px 0px 0px 0px;
+
+    transition: color .3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__date {
+    color: rgba(29, 25, 20, 0.7);
+    margin-top: 15px;
+    line-height: 150%;
+    margin: 15px 0px 30px 0px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__btn {
+    margin-top: auto;
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+}

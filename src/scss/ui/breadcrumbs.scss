@@ -1,15 +1,11 @@
 .aioseo-breadcrumbs {
   @include flex-center;
   gap: 10px;
-  margin-bottom: 20px;
 
   font-weight: 300;
   font-size: 14px;
   color: rgba(29, 25, 20, 0.5);
 
-  @include tablet {
-    margin-bottom: 15px;
-  }
   @include tablet-min {
     font-size: 13px;
   }

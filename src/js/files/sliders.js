@@ -82,4 +82,31 @@ export default function sliders() {
       },
     });
   }
+
+  const stocksSlider = document.querySelector(".s-stocks__slider");
+
+  if (stocksSlider) {
+    const swiper = new Swiper(stocksSlider, {
+      speed: 900,
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 3500,
+      },
+      pagination: {
+        el: ".s-stocks .slider-pagination-shadow",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 20,
+          slidesPerView: 4,
+        },
+        992: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
 }
