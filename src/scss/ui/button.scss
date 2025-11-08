@@ -80,6 +80,14 @@
     --hover-fill-color: var(--brown-light);
     --hover-border-color: var(--brown-light);
   }
+  &._white {
+    --border-color: white;
+    --fill-color: white;
+    --hover-fill-color: var(--primary);
+    --hover-border-color: var(--primary);
+    --color: var(--black);
+    --hover-color: white;
+  }
   &._outline-brown {
     --border-color: var(--brown);
     --fill-color: transparent;

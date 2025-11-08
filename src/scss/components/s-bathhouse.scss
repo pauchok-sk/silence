@@ -1,8 +1,250 @@
 .s-bathhouse {
+  .page-head {
+    margin-bottom: 20px;
+    @include laptop-min {
+      margin-bottom: 15px;
+    }
+  }
+  &__gallery-container {
+    @include tablet {
+      padding: 0;
+    }
+  }
   &__gallery {
+    position: relative;
+    overflow: hidden;
+    padding: 160px 100px;
+    border-radius: 6px;
+    color: white;
+    z-index: 1;
+
+    @include laptop-middle {
+      padding: 100px 60px;
+    }
+    @include tablet {
+      padding: 15px;
+      border-radius: 0px;
+      min-height: 500px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: rgba(29, 25, 20, 0.2);
+      z-index: -1;
+    }
   }
   &__gallery-content {
+    padding: 60px;
+    border-radius: 12px;
+    max-width: 800px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(29, 25, 20, 0.5);
+
+    @include laptop-min {
+      padding: 40px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+    @include tablet-min {
+      padding: 15px;
+    }
   }
   &__gallery-title {
+    font-weight: 500;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+
+    @include laptop-min {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    @include tablet-min {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+  }
+  &__gallery-descr {
+    margin: 0;
+  }
+  &__spec {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    @include tablet-min {
+      gap: 10px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 6px;
+    background-color: var(--wood);
+
+    line-height: 150%;
+    font-weight: 400;
+
+    z-index: 1;
+
+    @include laptop-min {
+      padding: 20px;
+    }
+    @include tablet-min {
+      padding: 15px;
+    }
+
+    &._primary {
+      background-color: var(--avacado);
+      color: white;
+
+      .s-bathhouse__item-title {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &::before, &::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        width: 35px;
+        height: 125px;
+        background: url('@img/decor-direction-top.svg') center / contain no-repeat;
+      }
+      &::before {
+        left: 0;
+        bottom: 0;
+      }
+      &::after {
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  &__item-title {
+    font-weight: 300;
+    color: rgba(29, 25, 20, 0.5);
+    margin-bottom: 20px;
+    @include tablet-min {
+      margin-bottom: 10px;
+    }
+  }
+  &__item-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .value {
+        font-weight: 500;
+        font-size: 24px;
+
+        @include laptop-min {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &__item-btn {
+    width: 100%;
+    margin-top: auto;
+  }
+  &__item-list-check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      @include tablet-min {
+        gap: 5px;
+      }
+
+      svg {
+        display: block;
+        margin-top: 8px;
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        color: var(--light-green);
+      }
+    }
+  }
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet-min {
+      gap: 5px;
+    }
+
+    li {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 15px;
+
+
+      .value {
+        display: flex;
+        gap: 5px;
+        flex-shrink: 0;
+
+        &::before {
+          content: "/";
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+  &__item-list-points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet-min {
+      gap: 5px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &::before {
+        content: "";
+        background-color: var(--light-green);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__item-content {
+    margin: 10px 0px 0px 0px;
+    @include tablet-min {
+      margin-top: 5px;
+    }
   }
 }
