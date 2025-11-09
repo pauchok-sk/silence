@@ -109,4 +109,24 @@ export default function sliders() {
       },
     });
   }
+
+  const eventSliders = document.querySelectorAll(".card-event__slider");
+
+  if (eventSliders.length) {
+    eventSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        spaceBetween: 15,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: slider.querySelector(".slider-btn._prev"),
+          nextEl: slider.querySelector(".slider-btn._next"),
+        },
+        pagination: {
+          el: slider.querySelector(".slider-pagination-shadow"),
+          clickable: true,
+        },
+      });
+    });
+  }
 }

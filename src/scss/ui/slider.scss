@@ -117,10 +117,6 @@
   &.swiper-button-disabled {
     opacity: 0;
     visibility: hidden;
-
-    svg {
-      transform: translateX(-2px);
-    }
   }
 }
 
