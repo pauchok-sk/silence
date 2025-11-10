@@ -40,6 +40,10 @@
     @include tablet-min {
       padding: 20px;
     }
+
+    &._center {
+      margin: 0 auto;
+    }
   }
   &__title {
     text-align: center;

@@ -1,0 +1,162 @@
+<section class="s-certificate sect-m _pt">
+  <div class="container">
+    <div class="page-head">
+      <div class="aioseo-breadcrumbs">
+        <span class="aioseo-breadcrumb">
+          <a href="https://bat.qorix.ru" title="Главная">Главная</a>
+        </span>
+        <span class="aioseo-breadcrumb-separator">&gt;</span>
+        <span class="aioseo-breadcrumb">Подарочные сертификаты</span>
+      </div>
+      <div class="m-title page-head__title">Подарочные сертификаты</div>
+      <p class="page-head__content content">
+        На нашем сайте вы можете оформить подарочный сертификат определенного
+        номинала. Для этого выполните несколько простых шагов ниже
+      </p>
+    </div>
+  </div>
+  <div class="s-certificate__main bg-wood">
+    <div class="container">
+      <form action="#" class="s-certificate__form">
+        <div class="s-certificate__step">
+          <div class="s-certificate__step-tag"><span>Шаг 1</span></div>
+          <div class="s-certificate__step-name">Выберите номинал</div>
+          <div class="s-certificate__step-price">
+            <img
+              src="@img/logo-white.svg"
+              alt=""
+              class="s-certificate__step-price-logo"
+            />
+            <div class="s-certificate__step-price-name">
+              Подарочный сертификат
+            </div>
+            <input
+              type="number"
+              id="certificate-price"
+              name="price"
+              required
+              placeholder="Укажите сумму сертификата"
+              class="s-certificate__step-price-input input"
+            />
+          </div>
+        </div>
+        <div class="s-certificate__step">
+          <div class="s-certificate__step-tag"><span>Шаг 2</span></div>
+          <div class="s-certificate__step-name">
+            Заполните данные получателя сертификата (кому дарите)
+          </div>
+          <div class="s-certificate__form-grid">
+            <div class="input-control">
+              <input
+                type="text"
+                placeholder="Имя, фамилия *"
+                id="certificate-owner-name"
+                name="Имя получателя"
+                required
+                class="input"
+              />
+            </div>
+            <div class="input-control">
+              <input
+                type="tel"
+                placeholder="Номер телефона *"
+                id="certificate-owner-tel"
+                name="Телефон получателя"
+                required
+                class="input"
+              />
+            </div>
+            <div class="input-control">
+              <input
+                type="email"
+                placeholder="E-mail"
+                id="certificate-owner-email"
+                name="Email получателя"
+                class="input"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="s-certificate__step">
+          <div class="s-certificate__step-tag"><span>Шаг 3</span></div>
+          <div class="s-certificate__step-name">
+            Заполните контактные данные (от кого подарок)
+          </div>
+          <div class="s-certificate__form-grid">
+            <div class="input-control">
+              <input
+                type="text"
+                placeholder="От кого / Подпись"
+                id="certificate-sender-name"
+                name="Имя отправителя"
+                class="input"
+              />
+            </div>
+            <div class="input-control">
+              <input
+                type="tel"
+                placeholder="Номер телефона отправителя *"
+                id="certificate-sender-tel"
+                name="Телефон отправителя"
+                required
+                class="input"
+              />
+            </div>
+            <div class="input-control">
+              <input
+                type="email"
+                placeholder="E-mail"
+                id="certificate-sender-email"
+                name="Email отправителя"
+                class="input"
+              />
+            </div>
+            <div class="input-control _big">
+              <textarea
+                placeholder="Текст послания"
+                id="certificate-sender-descr"
+                name="Текст послания"
+                class="input"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="s-certificate__bottom">
+          <div class="check-wrapper _brown">
+            <span class="wpcf7-form-control-wrap">
+              <span class="wpcf7-form-control wpcf7-acceptance">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="Согласен с условиями"
+                      class="input-check"
+                      required
+                      />
+                    <span class="wpcf7-list-item-label">
+                      <span>
+                        Я соглашаюсь
+                        <a href="/personal-data" target="_blank">
+                          Политикой обработки персональных данных
+                        </a>
+                        и
+                        <a href="/privacy-policy" target="_blank">
+                          Политикой конфиденциальности
+                        </a>
+                      </span>
+                    </span>
+                  </label>
+                </span>
+              </span>
+            </span>
+          </div>
+          <ul class="list s-certificate__bottom-list">
+            <li><a href="#">Правила продажи и обращения электронных подарочных сертификатов</a></li>
+            <li><a href="#">Наши реквизиты</a></li>
+          </ul>
+          <button class="btn-s _brown s-certificate__submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

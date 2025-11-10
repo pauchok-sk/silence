@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header-main.html')
+    @@include('html/components/burger.html')
+    @@include('html/components/modals.html')
+    <main>
+      
+      @@include('html/components/s-archive-stocks.html')
+      <section class="sect-m s-connect">
+        <div class="container">
+          <div
+            class="s-connect__body"
+            style="
+              background: url(&quot;@img/connect.jpg&quot;) center / cover no-repeat;
+            "
+          >
+            <div class="s-connect__form-wrapper _center">
+              <h2 class="s-title s-connect__title">Задать вопрос</h2>
+              <form action="#" class="s-connect__form">
+                <div class="input-control">
+                  <input type="text" placeholder="Ваше имя" class="input" />
+                </div>
+                <div class="input-control">
+                  <input type="tel" placeholder="+7 (___) ___-__-__" class="input" />
+                </div>
+                <div class="input-control">
+                  <textarea placeholder="Ваш вопрос" class="input"></textarea>
+                </div>
+                <div class="check-wrapper _white">
+                  <span class="wpcf7-form-control-wrap" data-name="acceptance-622">
+                    <span class="wpcf7-form-control wpcf7-acceptance">
+                      <span class="wpcf7-list-item">
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="acceptance-622"
+                            value="1"
+                            class="input-check"
+                            aria-invalid="false"
+                          />
+                          <span class="wpcf7-list-item-label">
+                            <span>
+                              Я соглашаюсь
+                              <a href="/personal-data" target="_blank">
+                                Политикой обработки персональных данных
+                              </a>
+                              и
+                              <a href="/privacy-policy" target="_blank">
+                                Политикой конфиденциальности
+                              </a>
+                            </span>
+                          </span>
+                        </label>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <button class="btn-s _brown">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    @@include('html/components/form-bar.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.s-faq {
+  &__spollers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__spoller {
+    border-radius: 6px;
+    background-color: var(--alabaster);
+  }
+  &__spoller-btn {
+    @include flex-between;
+    cursor: pointer;
+    padding: 30px;
+    gap: 10px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include laptop-min {
+      padding: 20px;
+      font-size: 17px;
+    }
+    @include tablet {
+      align-items: start;
+      padding: 15px;
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+
+      transition: transform 0.3s ease;
+    }
+  }
+  &__spoller-body {
+    padding: 0px 30px 30px 30px;
+    color: rgba(29, 25, 20, 0.7);
+    @include laptop-min {
+      padding: 0px 20px 20px 20px;
+    }
+    @include tablet {
+      padding: 0px 15px 15px 15px;
+    }
+
+    .content {
+      max-width: 1200px;
+    }
+  }
+}
