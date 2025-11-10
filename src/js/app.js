@@ -7,6 +7,7 @@ import headerScroll from "./files/headerScroll.js";
 import inputmask from "./files/inputmask.js";
 import map from "./files/map.js";
 import scrollables from "./files/scrollalbes.js";
+import select from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 
@@ -20,6 +21,7 @@ brone();
 map();
 inputmask();
 scrollables();
+select();
 
 AOS.init();
 Fancybox.bind("[data-fancybox]", {});

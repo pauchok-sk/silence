@@ -94,7 +94,7 @@ export default function sliders() {
         delay: 3500,
       },
       pagination: {
-        el: ".s-stocks .slider-pagination-shadow",
+        el: ".s-stocks .slider-pagination",
         clickable: true,
       },
       breakpoints: {
@@ -127,6 +127,53 @@ export default function sliders() {
           clickable: true,
         },
       });
+    });
+  }
+
+  const possibilitiesSlider = document.querySelector(
+    ".s-possibilities__slider"
+  );
+
+  if (possibilitiesSlider) {
+    const swiper = new Swiper(possibilitiesSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: possibilitiesSlider.querySelector(".slider-btn._prev"),
+        nextEl: possibilitiesSlider.querySelector(".slider-btn._next"),
+      },
+      pagination: {
+        el: possibilitiesSlider.querySelector(".slider-pagination-shadow"),
+        clickable: true,
+      },
+    });
+  }
+
+  const variantsSlider = document.querySelector(".s-variants__slider");
+
+  if (variantsSlider) {
+    const swiper = new Swiper(variantsSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-variants .slider-btn._prev",
+        nextEl: ".s-variants .slider-btn._next",
+      },
+      pagination: {
+        el: ".s-variants .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+      },
     });
   }
 }

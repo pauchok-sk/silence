@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    @@include('html/components/burger.html')
+    @@include('html/components/modals.html')
+    <main>
+      
+      <section class="sect-m s-hero _pt">
+        <div class="container s-hero__gallery-container">
+          <div class="page-head">
+            <div class="container">
+              <div class="aioseo-breadcrumbs">
+                <span class="aioseo-breadcrumb">
+                  <a href="https://bat.qorix.ru" title="Главная">Главная</a>
+                </span>
+                <span class="aioseo-breadcrumb-separator">&gt;</span>
+                <span class="aioseo-breadcrumb">Баня с чаном</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="s-hero__gallery"
+            style="
+              background: url(&quot;@img/event-hero.jpg&quot;) center / cover no-repeat;
+            "
+          >
+            <div class="s-hero__gallery-content">
+              <h1 class="s-title s-hero__gallery-title">Проведите корпоративное мероприятие в эко-усадьбе «Тишина» в Казани</h1>
+              <p class="s-hero__gallery-descr content">
+                Противоположная точка зрения подразумевает, что многие известные личности представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/s-event.html')
+      @@include('html/components/s-possibilities.html')
+      @@include('html/components/s-included.html')
+      <section class="s-gallery sect-m">
+        <div class="container">
+          <div class="sect-head _col">
+            <h2 class="s-title">Фото с прошедших мероприятий</h2>
+          </div>
+          <div class="gallery">
+            <a
+              href="@img/gallery-1.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-1.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-2.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-2.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-1.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-1.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-2.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-2.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-3.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-3.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-1.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-1.jpg" alt="image" />
+            </a>
+            <a
+              href="@img/gallery-1.jpg"
+              data-fancybox="about-gallery"
+              class="gallery-item"
+            >
+              <img src="@img/gallery-2.jpg" alt="image" />
+            </a>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/s-get-price.html')
+      @@include('html/components/s-variants.html')
+      @@include('html/components/s-stocks.html')
+      @@include('html/components/s-reviews.html')
+      <section class="sect-m s-connect">
+        <div class="container">
+          <div
+            class="s-connect__body"
+            style="
+              background: url(&quot;@img/brone-input.jpg&quot;) center / cover no-repeat;
+            "
+          >
+            <div class="s-connect__form-wrapper">
+              <h2 class="s-title s-connect__title">Забронировать мероприятие</h2>
+              <form action="#" class="s-connect__form">
+                <div class="input-control">
+                  <input type="text" placeholder="Ваше имя" class="input" />
+                </div>
+                <div class="input-control">
+                  <input type="tel" placeholder="+7 (___) ___-__-__" class="input" />
+                </div>
+                <div class="input-control _min">
+                  <div class="select">
+                    <div class="select-btn">
+                      <input type="text" placeholder="Выберите мероприятие" readonly class="input">
+                    </div>
+                    <div class="select-body">
+                      <div class="select-item">мероприятие 1</div>
+                      <div class="select-item">мероприятие 2</div>
+                      <div class="select-item">мероприятие 3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-control _min">
+                  <input type="text" placeholder="Дата проведения" class="input _date">
+                </div>
+                <div class="check-wrapper _white">
+                  <span class="wpcf7-form-control-wrap" data-name="acceptance-622">
+                    <span class="wpcf7-form-control wpcf7-acceptance">
+                      <span class="wpcf7-list-item">
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="acceptance-622"
+                            value="1"
+                            class="input-check"
+                            aria-invalid="false"
+                          />
+                          <span class="wpcf7-list-item-label">
+                            <span>
+                              Я соглашаюсь
+                              <a href="/personal-data" target="_blank">
+                                Политикой обработки персональных данных
+                              </a>
+                              и
+                              <a href="/privacy-policy" target="_blank">
+                                Политикой конфиденциальности
+                              </a>
+                            </span>
+                          </span>
+                        </label>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <button class="btn-s _brown">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/s-contacts.html')
+
+    </main>
+    @@include('html/components/form-bar.html')
+    @@include('html/components/footer.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

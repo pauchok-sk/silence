@@ -1,0 +1,21 @@
+.s-variants {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+    .swiper-slide {
+      height: auto !important;
+      @include laptop-middle {
+        width: 530px !important;
+      }
+      @include tablet {
+        width: 400px !important;
+        max-width: 100%;
+      }
+    }
+    .card-lodge {
+      height: 100%;
+    }
+  }
+}

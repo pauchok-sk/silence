@@ -46,10 +46,23 @@
     margin-bottom: 30px;
   }
   &__form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    .btn-s {
+    .input-control {
+      grid-column: 2 span;
+      &._min {
+        grid-column: 1 span;
+      }
+
+      @include tablet-min {
+        &._min {
+          grid-column: 2 span;
+        }
+      }
+    }
+    .btn-s, .check-wrapper {
+      grid-column: 2 span;
       width: 100%;
     }
   }

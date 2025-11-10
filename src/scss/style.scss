@@ -23,6 +23,7 @@
 @import "./ui/breadcrumbs";
 @import "./ui/card-stock";
 @import "./ui/card-event";
+@import "./ui/select";
 
 // widget
 @import "./widget/burger";
@@ -44,7 +45,12 @@
 @import "./components/s-connect";
 @import "./components/s-lodge";
 @import "./components/s-stocks";
-@import "./components/s-bathhouse";
+@import "./components/s-hero";
 @import "./components/s-events";
+@import "./components/s-event";
+@import "./components/s-possibilities";
+@import "./components/s-included";
+@import "./components/s-get-price";
+@import "./components/s-variants";
 
 @import "./components/footer";

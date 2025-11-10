@@ -1,0 +1,54 @@
+.s-included {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+
+    @include laptop-middle {
+      padding: 20px;
+    }
+    @include tablet {
+      padding: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(180deg, rgba(29, 25, 20, 0) 50%, rgba(29, 25, 20, 0.8) 100%);
+      z-index: -1;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    @include laptop-middle {
+      font-size: 24px;
+    }
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}

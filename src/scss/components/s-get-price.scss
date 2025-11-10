@@ -1,0 +1,92 @@
+.s-get-price {
+  position: relative;
+  color: white;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+  }
+  &::before {
+    background: linear-gradient(180deg, #555b3b 0%, rgba(85, 91, 59, 0) 100%);
+    z-index: -1;
+  }
+  &::after {
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -2;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+
+    @include desktop {
+      gap: 40px;
+    }
+    @include laptop-min {
+      gap: 30px;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    margin: 0px 0px 30px 0px;
+    font-weight: 400;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__info-bottom {
+    margin-top: auto;
+    padding: 50px;
+    border-radius: 6px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+
+    @include laptop {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 12px;
+    }
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__bottom-content {
+    line-height: 150%;
+    margin: 0;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .input-control {
+      &:nth-child(5),&:nth-child(6),&:nth-child(7) {
+        grid-column: 2 span;
+      }
+      @include tablet {
+        grid-column: 2 span;
+      }
+    }
+    .check-wrapper, .btn-s {
+      grid-column: 2 span;
+      width: 100%;
+    }
+  }
+}
