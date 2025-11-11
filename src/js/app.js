@@ -6,6 +6,7 @@ import formBarScroll from "./files/formBarScroll.js";
 import headerScroll from "./files/headerScroll.js";
 import inputmask from "./files/inputmask.js";
 import map from "./files/map.js";
+import menuPage from "./files/menuPage.js";
 import scrollables from "./files/scrollalbes.js";
 import select from "./files/select.js";
 import sliders from "./files/sliders.js";
@@ -22,6 +23,7 @@ map();
 inputmask();
 scrollables();
 select();
+menuPage();
 
 AOS.init();
 Fancybox.bind("[data-fancybox]", {});
